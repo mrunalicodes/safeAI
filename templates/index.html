@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>SAFEAI | Women Safety Assistant</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">🛡️ SAFEAI</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#assistant">AI Assistant</a>
+            <a href="#contact">Emergency Contact</a>
+            <a href="#location">Location</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-text">
+                <span class="badge">🛡️ AI POWERED SAFETY</span>
+
+                <h1>Your Safety.<br>
+                    <span>Your Priority.</span>
+                </h1>
+
+                <p>
+                    SAFEAI is an AI-powered emergency and safety assistant
+                    designed to help you respond quickly when you feel unsafe.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#assistant" class="primary-btn">
+                        🤖 Get Safety Assistance
+                    </a>
+
+                    <button class="sos-button" onclick="triggerSOS()">
+                        🚨 EMERGENCY SOS
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="shield">🛡️</div>
+                <h2>Stay Alert. Stay Safe.</h2>
+                <p>
+                    Describe your situation and SAFEAI will provide
+                    immediate safety guidance.
+                </p>
+
+                <div class="status">
+                    <span></span> Safety Assistant Online
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SAFETY FEATURES -->
+<section class="features">
+
+    <h2>Safety Tools</h2>
+    <p class="section-text">
+        Quick access to important safety features.
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card" onclick="location.href='#assistant'">
+            <div class="icon">🤖</div>
+            <h3>AI Safety Assistant</h3>
+            <p>
+                Describe what is happening and get AI-generated
+                safety guidance.
+            </p>
+        </div>
+
+        <div class="feature-card" onclick="location.href='#location'">
+            <div class="icon">📍</div>
+            <h3>Location Sharing</h3>
+            <p>
+                Get your current location to help share it
+                with a trusted person.
+            </p>
+        </div>
+
+        <div class="feature-card" onclick="location.href='#contact'">
+            <div class="icon">📱</div>
+            <h3>Trusted Contact</h3>
+            <p>
+                Prepare an emergency message for someone
+                you trust.
+            </p>
+        </div>
+
+        <div class="feature-card" onclick="triggerSOS()">
+            <div class="icon">🚨</div>
+            <h3>Emergency SOS</h3>
+            <p>
+                Quickly activate the emergency assistance
+                interface.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- AI ASSISTANT -->
+        <section class="assistant-section" id="assistant">
+
+            <div class="section-heading">
+                <span class="badge">🤖 AI ASSISTANT</span>
+
+                <h2>What's happening?</h2>
+
+                <p>
+                    Tell SAFEAI what is happening right now.
+                    You can type or use your microphone.
+                </p>
+            </div>
+
+            <div class="assistant-box">
+
+                <textarea
+                    id="situation"
+                    rows="7"
+                    placeholder="Example: Someone is following me and I am alone..."
+                ></textarea>
+
+                <div class="assistant-actions">
+
+                    <button
+                        class="secondary-btn"
+                        type="button"
+                        onclick="startVoiceInput()">
+                        🎤 Speak Situation
+                    </button>
+
+                    <button
+                        class="primary-btn"
+                        onclick="analyzeSituation()">
+                        🔍 Analyze Situation
+                    </button>
+
+                </div>
+
+                <div id="result"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRUSTED CONTACT -->
+        <section class="contact-section" id="contact">
+
+            <div class="section-heading">
+                <span class="badge">📱 EMERGENCY CONTACT</span>
+
+                <h2>Contact Someone You Trust</h2>
+
+                <p>
+                    Enter a trusted person's details to prepare
+                    an emergency message.
+                </p>
+            </div>
+
+            <div class="contact-box">
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Trusted person's name"
+                >
+
+                <input
+                    type="tel"
+                    id="contactNumber"
+                    placeholder="Phone number"
+                >
+
+                <button
+                    class="primary-btn"
+                    onclick="sendEmergencyMessage()">
+                    📩 Prepare Emergency Message
+                </button>
+
+                <div id="contactMessage"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOCATION -->
+        <section class="location-section" id="location">
+
+            <div class="section-heading">
+                <span class="badge">📍 LOCATION</span>
+
+                <h2>Get Your Current Location</h2>
+
+                <p>
+                    Your browser can provide your current location
+                    when you give permission.
+                </p>
+            </div>
+
+            <div class="location-box">
+
+                <div class="location-icon">📍</div>
+
+                <button
+                    class="primary-btn"
+                    onclick="getLocation()">
+                    Get My Current Location
+                </button>
+
+                <div id="locationResult"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EMERGENCY SECTION -->
+        <section class="emergency-section">
+
+            <div>
+                <span class="badge">⚠️ EMERGENCY</span>
+
+                <h2>Are you in immediate danger?</h2>
+
+                <p>
+                    Use the emergency assistance button and contact
+                    local emergency services when necessary.
+                </p>
+            </div>
+
+            <button
+                class="big-sos"
+                onclick="triggerSOS()">
+                🚨 SOS
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="logo">🛡️ SAFEAI</div>
+
+        <p>
+            AI-powered women safety and emergency assistance.
+        </p>
+
+        <small>
+            SAFEAI provides AI-generated safety guidance and does not
+            replace professional emergency services.
+        </small>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
