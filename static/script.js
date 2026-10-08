@@ -27,7 +27,10 @@ async function analyzeSituation() {
             return;
         }
 
-        const aiResult = JSON.parse(data.result);
+        const aiResult =
+            typeof data.result === "string"
+                ? JSON.parse(data.result)
+                : data.result;
 
         const summary =
             aiResult.summary ||
