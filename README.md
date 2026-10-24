@@ -83,6 +83,7 @@ SAFEAI provides informational safety guidance and may not always assess a situat
 
 Keep API keys and other secrets private. Never commit them to GitHub.
 
+
 ## Screenshots
 
 ### Home Page
@@ -92,7 +93,7 @@ Keep API keys and other secrets private. Never commit them to GitHub.
 ![SAFEAI AI Assistant](Screenshot%202026-10-24%20181440.png)
 
 ### Location Feature
-![SAFEAI Location](Screenshot%202026-10-24%20181519.png)
+![SAFEAI Location Feature](Screenshot%202026-10-24%20181519.png)
 
 ## Testing
 
