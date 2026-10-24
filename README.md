@@ -115,3 +115,27 @@ The following features have been tested successfully:
 ## Disclaimer
 
 SAFEAI is a safety-support tool, not a replacement for emergency services. AI-generated guidance may be inaccurate. In an immediate emergency in India, call 112.
+## Running Tests
+
+SAFEAI includes automated tests for its Flask routes and local risk analysis.
+
+Install pytest:
+
+```bash
+pip install pytest
+```
+
+Run the test suite from the project directory:
+
+```bash
+python -m pytest -v
+```
+
+The tests cover:
+
+- Home page response
+- Invalid requests to the analysis endpoint
+- Empty situation validation
+- HIGH, MEDIUM, and LOW risk classification
+
+The test suite can run without an OpenAI API key because it tests the local analysis function directly.
