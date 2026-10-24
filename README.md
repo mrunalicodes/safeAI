@@ -94,3 +94,24 @@ Keep API keys and other secrets private. Never commit them to GitHub.
 ### Location Feature
 ![SAFEAI Location](Screenshot%202026-10-24%20181519.png)
 
+## Testing
+
+The following features have been tested successfully:
+
+- Situation analysis and risk classification
+- Voice input
+- Location sharing with Google Maps
+- Emergency message generation
+- Copy emergency message
+- SOS options
+
+## Future Improvements
+
+- Improve AI response reliability and error handling
+- Add automated tests for core features
+- Improve mobile responsiveness and accessibility
+- Add secure user settings and trusted-contact management
+
+## Disclaimer
+
+SAFEAI is a safety-support tool, not a replacement for emergency services. AI-generated guidance may be inaccurate. In an immediate emergency in India, call 112.
