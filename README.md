@@ -29,3 +29,42 @@ SAFEAI/
 ├── .gitignore
 ├── static/
 └── templates/
+
+## Installation & Setup
+
+### Prerequisites
+- Python 3.10 or later
+- Git
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/mrunalicodes/safeAI.git
+cd safeAI
+```
+
+### 2. Create a virtual environment
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+**Windows:**
+```bash
+.venv\Scripts\activate
+```
+
+### 4. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run SAFEAI
+```bash
+python app.py
+```
+
+Open `http://127.0.0.1:5000` in your browser.
+
+### Note
+Some AI features may require a valid API key configured locally. Never commit API keys, passwords, or other secrets to GitHub.
