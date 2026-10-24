@@ -82,3 +82,15 @@ Open http://127.0.0.1:5000 in your browser.
 SAFEAI provides informational safety guidance and may not always assess a situation correctly. In an immediate emergency in India, call 112. Do not rely on SAFEAI as a substitute for emergency services.
 
 Keep API keys and other secrets private. Never commit them to GitHub.
+
+## Screenshots
+
+### Home Page
+![SAFEAI Home Page](Screenshot%202026-10-24%20181401.png)
+
+### AI Assistant
+![SAFEAI AI Assistant](Screenshot%202026-10-24%20181440.png)
+
+### Location Feature
+![SAFEAI Location](Screenshot%202026-10-24%20181519.png)
+
